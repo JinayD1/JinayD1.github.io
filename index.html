@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html class="contact">
 <head>
-    <title>Contact</title>
+    <title>Home - Jinay Desai's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
 </head>
-<body style="background:black; height: 100vh;">
+<body>
     <header>
         <nav class="nav">
             <div class="table">
@@ -17,15 +18,41 @@
             </div>
         </nav>
     </header>
+    <!-- Particle Background -->
+    <div class="container">
 
-    <section id="landing">
-        <h1 style="text-align: center;">Welcome to Jinay Desai's Portfolio</h1>
-        <p style="text-align: center;">Explore my experiences, projects, and more!</p>
-    </section>
-    <footer>
-        <p>Copyright © 2023 Jinay Desai</p>
-    </footer>
+        <!-- Main Content -->
+        <div class="circle-container">
+            <!-- Each circle will be generated with the CSS loop -->
+            <div class="circle"></div>
+            <!-- Repeat the circle divs as needed -->
+            <div>
+                <div class="container">
+                    <h1 style="text-align: center;">Welcome to Jinay Desai's Portfolio</h1>
+                    <p style="text-align: center;">Developer. Innovator. Aspiring Software Engineer!</p>
+                    
+                    <!-- Circular Frame and Social Icons -->
+                    <div class="circular-frame-container">
+                        <div class="circular-frame">
+                            <img src="images/jinay.jpg" alt="Jinay Desai" class="circular-frame-image">
+                        </div>
+                        <div class="social-icons">
+                            <a href="https://github.com/yourusername" target="_blank">
+                                <img src="icons/github.png" alt="GitHub">
+                            </a>
+                            <a href="https://instagram.com/yourusername" target="_blank">
+                                <img src="icons/instagram.png" alt="Instagram">
+                            </a>
+                            <!-- Add more icons as needed -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer style="position: absolute; bottom: 0.5vh; font-size: 12px; margin-left: 5%">
+                <p>Copyright © 2023 Jinay Desai</p>
+            </footer>
+        </div>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>

@@ -3,9 +3,11 @@
 <head>
     <title>Contact</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
 </head>
-<body style="background:black; height: 100vh;">
+<body>
     <header>
+        </div>
         <nav class="nav">
             <div class="table">
                 <ul id="menu-horizontal">
@@ -17,27 +19,47 @@
             </div>
         </nav>
     </header>
-    <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="subtitle">Contact</h1>
-                    <p>Feel free to contact me if you'd like to work together and I will get back to you as soon as I can.</p>
+    <!-- Particle Background -->
+    <div class="container">
+
+        <!-- Main Content -->
+        <div class="circle-container">
+            <!-- Each circle will be generated with the CSS loop -->
+            <div class="circle"></div>
+            <!-- Repeat the circle divs as needed -->
+            <div>
+                    <div id="contact">
+                        <div class="row">
+                            <div class="contact-left">
+                                <h1 class="subtitle">Contact</h1>
+                                <p>Feel free to contact me if you'd like to work together and I will get back to you as soon as I can.</p>
+                            </div>
+                            <div class="contact-right">
+                                <form name="submit-to-google-sheet">
+                                    <input type="text" name="Name" placeholder="Your Name" required>
+                                    <input type="email" name="Email" placeholder="Your Email" required>
+                                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                                    <button type="submit" class="btn2" onclick="alert('Your Message has been submitted!')">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn2" onclick="alert('Your Message has been submitted!')">Submit</button>
-                    </form>
-                </div>
-            </div>
+
+            <footer style="position: absolute; bottom: 0.5vh; font-size: 12px; margin-left: 5%">
+                <p>Copyright © 2023 Jinay Desai</p>
+            </footer>
         </div>
     </div>
-    <footer style="position: absolute; bottom: 0.5vh; font-size: 12px; margin-left: 5%">
-        <p>Copyright © 2023 Jinay Desai</p>
-    </footer>
+        <div id="contact">
+            <div class="container">
+                
+            </div>
+        </div>
+        <footer style="position: absolute; bottom: 0.5vh; font-size: 12px; margin-left: 5%">
+            <p>Copyright © 2023 Jinay Desai</p>
+        </footer>    
+    
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbzyrdahUFlfinLZ0OLVdOtyEOderLniOKSaaEk30tYKL3W6dNyMzewlc7-NwrkdMxY5/exec'
         const form = document.forms['submit-to-google-sheet']

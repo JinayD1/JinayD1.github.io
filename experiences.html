@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html style="height:100%;">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experiences - Jinay Desai</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
     <style>
         .resume-container {
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
+            align-items: flex-start;
+            height: auto;
+            padding: 20px 0;
         }
         .resume-iframe {
             width: 80%;
@@ -27,21 +27,31 @@
                     <ul id="menu-horizontal">
                         <li><a href="index.html" class="hover-underline-animation">HOME</a></li>
                         <li><a href="experiences.html" class="hover-underline-animation">EXPERIENCES</a></li>
-                        <li><a href="/Users/jinay/Documents/Portfolio Draft 1/projects.html" class="hover-underline-animation">PROJECTS</a></li>
+                        <li><a href="projects.html" class="hover-underline-animation">PROJECTS</a></li>
                         <li><a href="contact.html" class="hover-underline-animation">CONTACT</a></li>
                     </ul>
                 </div>
             </nav>
         </header>
-        <main>
-            <section id="about">
-                <h2>My Experiences</h2>
-                <div class="resume-container">
-                    <iframe src="images/resume.pdf" class="resume-iframe"></iframe>
+            <!-- Particle  Background -->
+        <div class="container">
+            <!-- This will be populated with particle circles -->
+            <div class="circle-container">
+                <!-- Each circle will be generated with the CSS loop -->
+                <div class="circle"></div>
+                <!-- Repeat the circle divs as needed -->
+                <div>
+                    <main>
+                        <section">
+                            <h2 style="font-size: 2.5em;">My Experiences</h2>
+                            <p> Download for full view.</p>
+                            <div class="resume-container">
+                                <iframe src="images/resume.pdf" class="resume-iframe"></iframe>
+                            </div>
+                        </section>
+                    </main>
                 </div>
-            </section>
-        </main>
+            </div>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>

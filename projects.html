@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" class="contact">
+<html class="contact">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects - Jinay Desai</title>
-  <link rel="stylesheet" href="styles.css">
+    <title>Projects</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
 </head>
 <body>
-  <div class="container">
     <header>
         <nav class="nav">
             <div class="table">
@@ -20,32 +18,37 @@
             </div>
         </nav>
     </header>
-    <main>
-      <section id="projects">
-        <h2>My Projects</h2>
-        <div class="projects-container">
-          <div class="project" onclick="window.location.href='https://github.com/JinayD1/FreshVision'"">
-            <img src="images/FreshVision.png" alt="FreshVision Project">
-            <h3>FreshVision</h3>
-            <p>Real-time food sensor to reduce food waste</p>
-          </div>
-          <div class="project" onclick="window.location.href='https://github.com/JinayD1/HopeLink'">
-            <img src="images/HopeLink.png" alt="HopeLink Project">
-            <h3>HopeLink</h3>
-            <p>Apocalyptic Tool, to locate food and resources</p>
-          </div>
-          <div class="project" onclick="window.location.href='https://github.com/JinayD1/Tic-tac-toe-AI'">
-            <img src="images/TicTacToe.png" alt="Tic Tac Toe AI">
-            <h3>Tic Tac Toe AI</h3>
-            <p>Impossible to beat TicTacToe AI, that implmenets the MiniMax Algorithm</p>
-          </div>
+    <div class="container">
+        <!-- This will be populated with particle circles -->
+        <div class="circle-container">
+            <!-- Each circle will be generated with the CSS loop -->
+            <div class="circle"></div>
+            <!-- Repeat the circle divs as needed -->
+                <h2 style="font-size: 2.5em; text-align: center;">My Projects</h2>
+                <div>
+                <div class="projects-container">
+                    <div class="project" onclick="window.location.href='https://github.com/JinayD1/FreshVision'">
+                        <img src="images/FreshVision.png" alt="FreshVision Project">
+                        <h3>FreshVision</h3>
+                        <p>Real-time food sensor to reduce food waste</p>
+                    </div>
+                    <div class="project" onclick="window.location.href='https://github.com/JinayD1/HopeLink'">
+                        <img src="images/HopeLink.png" alt="HopeLink Project">
+                        <h3>HopeLink</h3>
+                        <p>Apocalyptic Tool, to locate food and resources</p>
+                    </div>
+                    <div class="project" onclick="window.location.href='https://github.com/JinayD1/Tic-tac-toe-AI'">
+                        <img src="images/TicTacToe.png" alt="Tic Tac Toe AI">
+                        <h3>Tic Tac Toe AI</h3>
+                        <p>Impossible to beat TicTacToe AI, that implements the MiniMax Algorithm</p>
+                    </div>
+                </div>
+            </div>
+            <footer style="position: absolute; bottom: 0.5vh; font-size: 12px; margin-left: 5%">
+                <p>Copyright © 2023 Jinay Desai</p>
+            </footer>
         </div>
-      </section>
-    </main>
-    <footer>
-      <p>Copyright © 2023 Jinay Desai</p>
-    </footer>
-  </div>
-  <script src="script.js"></script>
+    </div>
+
 </body>
 </html>
