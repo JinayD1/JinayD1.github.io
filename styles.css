@@ -397,3 +397,40 @@ body {
 .social-icons a img:hover {
     transform: scale(1.2);
 }
+
+/* Typing Animation */
+.animation-text {
+    font-size: 1rem;
+    text-align: center;
+    white-space: nowrap;
+    min-width:280px;
+    overflow: hidden;
+    border-right: 3px solid;
+    width: 0;
+    animation: typing 4s, blink-caret 0.75s step-end infinite;
+}
+
+.animated-text span {
+    position: relative;
+
+}
+
+.animated-text span ::before {
+    content: "Full-Stack Developer";
+}
+
+.animated-text span ::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 100%;
+    border-left: 2px solid;
+    right: -8px;
+    animation: cursor .8s infinite;   
+}
+
+@keyframes cursor {
+    to {
+        border-left: 2px solid #ff7f5000;
+    }
+}

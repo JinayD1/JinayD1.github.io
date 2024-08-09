@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     // Example animation: Fade in elements on scroll
     const faders = document.querySelectorAll('.fade-in');
     const appearOptions = {
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Particle animation setup
     const container = document.querySelector('.circle-container');
-    const particleCount = 50; // Number of particles
+    const particleCount = 30; // Number of particles
 
     for (let i = 0; i < particleCount; i++) {
         const circle = document.createElement('div');
@@ -41,9 +41,40 @@ document.addEventListener('DOMContentLoaded', () => {
         circle.style.left = `${startPositionX}vw`;
 
         // Apply random animation delay and duration
-        const duration = Math.random() * 10 + 5 + 's';
+        const duration = Math.random() * 10 + 10 + 's';
         circle.style.animationDuration = duration;
         
         container.appendChild(circle);
     }
+
+    // Typing animation setup
+    const typingText = document.getElementById("typing-text");
+    const textArray = [
+        "Developer.",
+        "Innovator.",
+        "Aspiring Software Engineer!"
+    ];
+    let currentTextIndex = 0;
+    let currentCharIndex = 0;
+    let currentString = "";
+
+    function type() {
+        if (currentCharIndex < textArray[currentTextIndex].length) {
+            currentString += textArray[currentTextIndex].charAt(currentCharIndex);
+            typingText.textContent = currentString;
+            currentCharIndex++;
+            setTimeout(type, 150);
+        } else {
+            currentCharIndex = 0;
+            currentTextIndex++;
+            if (currentTextIndex < textArray.length) {
+                setTimeout(() => {
+                    currentString = "";
+                    type();
+                }, 1500);
+            }
+        }
+    }
+
+    type();
 });
