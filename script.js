@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         circle.classList.add('circle');
         
         // Randomize size and initial position
-        const size = Math.random() * 10 + 5; // Size between 5px and 15px
+        const size = Math.random() * 10 + 5; // Size between 5px and 10px
         const startPositionX = Math.random() * 100; // Random X position
         const startPositionY = Math.random() * 100; // Random Y position
 
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Typing animation setup
-    const typingText = document.getElementById("typing-text");
+    const typingText = document.getElementById("animated-text");
     const textArray = [
         "Developer.",
         "Innovator.",
