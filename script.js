@@ -1,5 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // Fade-in on page load
+    const mainContent = document.querySelector('.container');
+    mainContent.classList.add('fade-in-on-load');
+
     // Example animation: Fade in elements on scroll
     const faders = document.querySelectorAll('.fade-in');
     const appearOptions = {
@@ -48,30 +52,45 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Typing animation setup
-    const typingText = document.getElementById("animated-text");
+    const typingText = document.getElementById("typing-text");
     const textArray = [
-        "Developer.",
-        "Innovator.",
-        "Aspiring Software Engineer!"
+        "A Full-Stack Developer.",
+        "An Innovator.",
+        "An Aspiring Software Engineer!"
     ];
     let currentTextIndex = 0;
     let currentCharIndex = 0;
     let currentString = "";
+    let isDeleting = false; // Track if we're deleting
 
     function type() {
-        if (currentCharIndex < textArray[currentTextIndex].length) {
-            currentString += textArray[currentTextIndex].charAt(currentCharIndex);
-            typingText.textContent = currentString;
-            currentCharIndex++;
-            setTimeout(type, 150);
+        if (!isDeleting) {
+            // Typing characters
+            if (currentCharIndex < textArray[currentTextIndex].length) {
+                currentString += textArray[currentTextIndex].charAt(currentCharIndex);
+                typingText.textContent = currentString;
+                currentCharIndex++;
+                setTimeout(type, 150);
+            } else {
+                // Start deleting after a delay
+                isDeleting = true;
+                setTimeout(type, 1500);
+            }
         } else {
-            currentCharIndex = 0;
-            currentTextIndex++;
-            if (currentTextIndex < textArray.length) {
-                setTimeout(() => {
-                    currentString = "";
-                    type();
-                }, 1500);
+            // Deleting characters
+            if (currentCharIndex > 0) {
+                currentString = currentString.slice(0, -1);
+                typingText.textContent = currentString;
+                currentCharIndex--;
+                setTimeout(type, 150);
+            } else {
+                // Move to next word
+                isDeleting = false;
+                currentTextIndex++;
+                if (currentTextIndex >= textArray.length) {
+                    currentTextIndex = 0; // Loop back to first word
+                }
+                setTimeout(type, 500);
             }
         }
     }

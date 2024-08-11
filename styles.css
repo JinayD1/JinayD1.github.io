@@ -6,6 +6,8 @@ body {
     color: #fff;
     margin: 0;
     padding: 0;
+    background-image: radial-gradient(#021027, #000000);
+    animation: fadeIn;
 }
 
 .nav ul {
@@ -41,17 +43,6 @@ body {
     margin: 0 auto;
 }
 
-.club_table {  
-    display: table;
-    margin: 0 auto;
-}
-
-.club_table img {  
-    padding: 5px 8vh;
-    width: 22vh;
-    height: 20vh;
-}
-
 table .btn2 {
     padding: 10px 30px;
     font-size: 14px;
@@ -68,7 +59,7 @@ table .btn2 {
 .container {
     height: 100vh;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 25px;
 }
 
 #landing, #projects {
@@ -252,12 +243,12 @@ form .btn2 {
     flex-wrap: wrap;
     gap: 20px;
     position: relative;
-    overflow: hidden;
+    overflow: scroll;
   }
   
   .project {
     background-color: #1e1e1e;
-    border: 1px solid #333;
+    border: 1px solid radial-gradient(#021027, #000000);;
     border-radius: 10px;
     padding: 20px;
     width: 300px;
@@ -297,7 +288,7 @@ form .btn2 {
 
 .resume-iframe {
     width: 80%;
-    height: 90vh;
+    height: 100vh;
     border: none;
 }
 
@@ -310,17 +301,13 @@ body {
   overflow: hidden;
 }
 
-body {
-  background-image: radial-gradient(#021027, #000000);
-}
-
 .container {
     width: 100%;
     height: 200%;
     position: relative;
     overflow: hidden;
   }
-  
+
   .circle-container {
     position: absolute;
     width: 100%;
@@ -397,39 +384,24 @@ body {
     transform: scale(1.2);
 }
 
-/* Typing Animation */
-.animation-text {
-    font-size: 1rem;
-    text-align: center;
-    white-space: nowrap;
-    min-width:280px;
-    overflow: hidden;
-    border-right: 3px solid;
-    width: 0;
-    animation: typing 4s, blink-caret 0.75s step-end infinite;
-}
-
-.animated-text span {
-    position: relative;
-
-}
-
-.animated-text span ::before {
-    content: "Full-Stack Developer";
-}
-
-.animated-text span ::after {
-    content: "";
-    position: absolute;
-    width: 10px;
-    height: 100%;
-    border-left: 2px solid;
-    right: -8px;
-    animation: cursor .8s infinite;   
-}
-
 @keyframes cursor {
     to {
         border-left: 2px solid #ff7f5000;
     }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-on-load {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
 }
