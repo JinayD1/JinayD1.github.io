@@ -6,7 +6,6 @@ body {
     color: #fff;
     margin: 0;
     padding: 0;
-    background-image: radial-gradient(#021027, #000000);
     animation: fadeIn;
 }
 
@@ -299,6 +298,7 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  background-image: radial-gradient(#0d56d3, #000000);
 }
 
 .container {
